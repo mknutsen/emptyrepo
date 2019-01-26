@@ -1,0 +1,50 @@
+#
+# %%DEVICE%% by %%MANUFACTURER%%
+#
+
+
+################################################################################
+#
+# Defines Section - statements that will be processed to create a Makefile.
+#
+################################################################################
+[Defines]
+  PLATFORM_NAME           = %%DEVICE%%
+  PLATFORM_GUID           = %%GUID%%
+  PLATFORM_VERSION        = 1.0
+  DSC_SPECIFICATION       = 0x00010019
+  OUTPUT_DIRECTORY        = Build/%%DEVICE%%  
+  SUPPORTED_ARCHITECTURES = %%ARCH%%
+  BUILD_TARGETS           = DEBUG|RELEASE
+  SKUID_IDENTIFIER        = DEFAULT
+  BOARD_DIR               = %%MANUFACTURER%%/%%DEVICE%%
+  FLASH_DEFINITION        = $(BOARD_DIR)/PlatformBuild.fdf
+
+################################################################################
+#
+# includes Section - statements common to all %%DEVICE%% boards
+#
+################################################################################
+
+
+################################################################################
+#
+# Board specific Section - entries specific to %%DEVICE%%
+#
+################################################################################
+[LibraryClasses.common]
+
+[Components.common]
+
+################################################################################
+#
+# Pcd Section - list of all EDK II PCD Entries defined by %%DEVICE%%
+#
+################################################################################
+
+[PcdsFeatureFlag.common]
+  
+[PcdsFixedAtBuild.common]
+
+[PcdsPatchableInModule]
+
